@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FastFood.Lieferservice/1.0.0": {
+        "runtime": {
+          "FastFood.Lieferservice.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FastFood.Lieferservice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
