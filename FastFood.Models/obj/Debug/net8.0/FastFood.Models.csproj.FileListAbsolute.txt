@@ -1,0 +1,12 @@
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\bin\Debug\net8.0\FastFood.Models.deps.json
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\bin\Debug\net8.0\FastFood.Models.dll
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\bin\Debug\net8.0\FastFood.Models.pdb
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\FastFood.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\FastFood.Models.AssemblyInfoInputs.cache
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\FastFood.Models.AssemblyInfo.cs
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\FastFood.Models.csproj.CoreCompileInputs.cache
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\FastFood.Models.sourcelink.json
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\FastFood.Models.dll
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\refint\FastFood.Models.dll
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\FastFood.Models.pdb
+C:\Users\aveen alhadad\source\repos\FastFood.Lieferservice\FastFood.Models\obj\Debug\net8.0\ref\FastFood.Models.dll
