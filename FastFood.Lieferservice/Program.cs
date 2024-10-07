@@ -9,7 +9,7 @@ var connectionString = builder.Configuration.GetConnectionString("FastFoodLiefer
 builder.Services.AddDbContext<FastFoodLieferserviceDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireConfirmedAccount = false)
-    .AddEntityFrameworkStores<FastFoodLieferserviceDbContext>();
+    .AddRoles<IdentityRole>().AddEntityFrameworkStores<FastFoodLieferserviceDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -34,12 +34,46 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+//Hier wir die Rolle zu Datenbank gespeichert
+using(var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var roles = new[] { "Admin", "Manager", "Member" };
+    foreach(var role in roles)
+    {
+        if(!await roleManager.RoleExistsAsync(role))
+            await roleManager.CreateAsync(new IdentityRole(role));
+    }
+}
+// Ein Benutzer zu Datenbank hinzufügt mit Role  Admin
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+    string email = "admin@admin.com";
+    string password = "Test123@";
+    string firstName = "admin";
+    string lastName = "admin";
+
+    if(await userManager.FindByEmailAsync(email) == null)
+    {
+        var user = new AppUser();
+        user.FirstName = firstName;
+        user.LastName = lastName;
+        user.UserName = email;
+        user.Email = email;
+
+        await userManager.CreateAsync(user, password);
+
+        await userManager.AddToRoleAsync(user, "Admin");
+    }
+}
 
 app.Run();
